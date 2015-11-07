@@ -15,3 +15,15 @@ add_theme_support( 'genesis-responsive-viewport' );
 
 //* Add support for 3-column footer widgets
 add_theme_support( 'genesis-footer-widgets', 3 );
+
+//* Register widget areas
+genesis_register_sidebar( array(
+	'id'          => 'home-top',
+	'name'        => __( 'Home Top', 'treehouse-hueman-genesis' ),
+	'description' => __( 'Widgets in this section will display in the top widget area on the homepage.', 'treehouse-hueman-genesis' ),
+) );
+genesis_register_sidebar( array(
+	'id'          => 'home-bottom',
+	'name'        => __( 'Home Bottom', 'treehouse-hueman-genesis' ),
+	'description' => __( 'Widgets in this section will display in the bottom widget area on the homepage.', 'treehouse-hueman-genesis' ),
+) );
